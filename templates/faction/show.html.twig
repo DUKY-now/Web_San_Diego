@@ -3,8 +3,10 @@
 {% block title %}{{ faction.name }} - Project San Diego{% endblock %}
 
 {% block body %}
-<h1>{{ faction.name }}</h1>
-<p>{{ faction.desc }}</p>
+<h1>{{ faction.nom }}</h1>
+<p>{{ faction.Lore }}</p>
+
+<p><strong>Membres:</strong> {{ faction.membres }}</p>
 
 <div class="cards">
     {% for img in faction.images %}
