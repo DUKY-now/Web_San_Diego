@@ -1,0 +1,109 @@
+/* ========== FALLOUT STYLE ========== */
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #0c0c0c;
+    color: #d4ffbe;
+    font-family: 'Share Tech Mono', monospace;
+    background-image: radial-gradient(circle at 50% 50%, #0e0e0e 0%, #000 100%);
+}
+
+/* HEADER */
+.main-header {
+    background: #111;
+    border-bottom: 2px solid #58ff58;
+    padding: 15px 0;
+    text-align: center;
+}
+
+.logo-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.logo {
+    width: 150px;
+    height: 130px;
+}
+
+.main-header h1 {
+    font-family: 'Orbitron', sans-serif;
+    color: #58ff58;
+    text-shadow: 0 0 8px #58ff58;
+}
+
+/* NAVIGATION */
+.main-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0 0;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+.main-nav a {
+    color: #d4ffbe;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.main-nav a:hover {
+    color: #58ff58;
+    text-shadow: 0 0 5px #58ff58;
+}
+
+/* MAIN CONTENT */
+main {
+    padding: 40px 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+h1, h2, h3 {
+    color: #58ff58;
+}
+
+/* FOOTER */
+.main-footer {
+    border-top: 1px solid #333;
+    text-align: center;
+    padding: 15px;
+    font-size: 14px;
+    color: #777;
+    background-color: #0e0e0e;
+}
+
+/* FALLOUT SCANLINE EFFECT */
+body::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: repeating-linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.05) 0px,
+        rgba(0, 0, 0, 0.05) 1px,
+        transparent 1px,
+        transparent 2px
+    );
+    pointer-events: none;
+    z-index: 9999;
+}
+
+/* OPTIONAL CRT GLOW EFFECT */
+@keyframes flicker {
+    0% { opacity: 1; }
+    50% { opacity: 0.98; }
+    100% { opacity: 1; }
+}
+
+body {
+    animation: flicker 0.2s infinite;
+}

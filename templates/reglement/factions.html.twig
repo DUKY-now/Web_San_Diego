@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block body %}
+<section class="ChapitreCivil">
+    <h1>Règlement Civil</h1>
+
+    <article>
+        <h2>Chapitre 1 — Comportement</h2>
+        <p>
+         faut pas etre un zgueg
+        </p>
+    </article>
+
+        <article>
+        <h2>Chapitre 2 — Comportement</h2>
+        <p>
+         soyez normal svp
+        </p>
+    </article>
+
+    <p style="margin-top:2rem">
+        <a href="{{ path('app_reglement') }}" class="btn">⬅ Retour au règlement général</a>
+    </p>
+</section>
+{% endblock %}

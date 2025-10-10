@@ -16,11 +16,28 @@ final class ReglementController extends AbstractController
         ]);
     }
 
-    #[Route('/reglement/{slug}', name: 'app_reglement_show')]
-    public function show(string $slug): Response
+    #[Route('/reglement/chapitres', name: 'app_reglement_chapitres')]
+    public function chapitres(): Response
     {
-        return $this->render('reglement/show.html.twig', [
-            'reglement' => ucfirst($slug),
-        ]); 
+        return $this->render('reglement/chapitres.html.twig', [
+            'title' => 'Chapitres du Règlement - Project San Diego',
+        ]);
+
+    }
+    
+    #[Route('/reglement/civil', name: 'app_reglement_civil')]
+    public function civil(): Response
+    {
+        return $this->render('reglement/civil.html.twig', [
+            'title' => 'Règlement Civil - Project San Diego',
+        ]);
+    }
+
+    #[Route('/reglement/factions', name:'app_reglement_factions')]
+    public function factions(): Response
+    {
+        return $this->render('reglement/factions.html.twig',[
+            'title' => 'Règlement des Factions - Project San Diego',
+        ]);
     }
 }

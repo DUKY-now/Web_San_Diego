@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ faction.name }} - Project San Diego{% endblock %}
+
+{% block body %}
+<h1>{{ faction.name }}</h1>
+<p>{{ faction.desc }}</p>
+
+<div class="cards">
+    {% for img in faction.images %}
+        <img src="{{ asset('images/' ~ img) }}" alt="{{ faction.name }}" style="width:200px; margin:10px;">
+    {% endfor %}
+</div>
+
+<a href="{{ path('app_faction') }}">← Retour à la liste des factions</a>
+{% endblock %}

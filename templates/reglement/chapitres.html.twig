@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block body %}
+<section class="chapitres">
+    <h1>Règlement complet</h1>
+
+    <article id="chapitre1">
+        <h2>Chapitre 1 — Comportement</h2>
+        <p>
+            Chaque joueur doit faire preuve de respect envers les autres.
+            Les insultes, propos discriminatoires ou comportements toxiques sont interdits.
+        </p>
+    </article>
+
+    <article id="chapitre2">
+        <h2>Chapitre 2 — Rôleplay</h2>
+        <p>
+            Le serveur repose sur un univers immersif. Restez cohérent avec le contexte Fallout.
+            Pas de comportement hors-RP (HRP) en jeu sauf cas de force majeure.
+        </p>
+    </article>
+
+    <article id="chapitre3">
+        <h2>Chapitre 3 — Sanctions</h2>
+        <p>
+            En cas de non-respect des règles, des sanctions allant de l’avertissement
+            au bannissement peuvent être appliquées.
+        </p>
+    </article>
+
+    <p style="margin-top:2rem">
+        <a href="{{ path('app_reglement') }}" class="btn">⬅ Retour au règlement général</a>
+    </p>
+</section>
+{% endblock %}

@@ -1,20 +1,47 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello ReglementController!{% endblock %}
+{% block title %}Règlement-PSD{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
+   <link rel="stylesheet" href="{{ asset('css/reglement.css') }}">
 
 <div class="example-wrapper">
     <h1>Règlement Général et Spécifique</h1>
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code>E:/DEV/Web_San_Diego/src/Controller/ReglementController.php</code></li>
-        <li>Your template at <code>E:/DEV/Web_San_Diego/templates/reglement/index.html.twig</code></li>
-    </ul>
+    <h2>Informations générales</h2>
+    <li>Les Règles de la Communauté sont le Fondement d'un Environnement Structuré & Sain. Ce sont les Bases que Chacun doit Respecter pour Garantir le Respect, la Bonne Ambiance et la Sécurité de tous.</li>
+    
+    <h2>Préambules des Fondateurs:</h2>
+        Nous, " ⚜️• Project Founder - [F] " de : "© Project : San Diego™ | [Rp]", 
+        avons Crée cette Communauté de Jeu de Rôle Postapocalyptique dédié au Jeu Arma Reforger avec une Vision Claire : 
+    <br>Bâtir un Espace Accueillant, Structuré & Sécurisé où les Passionnés de RolePlay et d'Univers Immersifs peuvent se Retrouver, 
+        Échanger et Évoluer Ensemble, dans le Respect et la Bonne Humeur.
+
+        <h2>L'objection du règlement</h2>
+        <ul>
+        <li>Définir un Cadre Clair pour la Conduite de Chaque Membre</li>
+        <li>Assurer un Environnement Respectueux, Sûr et Agréable pour Tous</li>
+        <li>Préserver la Cohésion et l'Image Positive de Notre Communauté</li>
+        <li>Protéger le Travail, l'Engagement et le Temps Investi par l'Administration</li>
+        </ul>
+
+        
+<section class="Chapitrage">    
+ <h2>Chapitres</h2>
+    <div class="chapitres">
+        <ul>
+            <li><a href="{{ path('app_reglement_chapitres') }}#chapitre1">Chapitre 1 — Comportement</a></li>
+            <li><a href="{{ path('app_reglement_chapitres') }}#chapitre2">Chapitre 2 — Rôleplay</a></li>
+            <li><a href="{{ path('app_reglement_chapitres') }}#chapitre3">Chapitre 3 — Sanctions</a></li>
+        </ul>
+    </div>
+
+
+<div class="boutons-bas">
+        <a href="{{ path('app_reglement_factions') }}" class="btn">Règlement des Factions</a>
+        <a href="{{ path('app_reglement_civil') }}" class="btn">Règlement Civil / Général</a>
+    </div>
+</section>
+
 </div>
 {% endblock %}
