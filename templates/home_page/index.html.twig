@@ -32,7 +32,7 @@
         <div class="cards">
             <div class="card">
             <a href="{{ path('app_faction_show', {'slug': 'confrerie'}) }}"> {# Permet de creer un lien cliquable pour se rendre a la faction#}
-                <img src="{{ asset('images/factions/brotherhood.png') }}" alt="Brotherhood of Steel">
+                <img src="{{ asset('images/factions/Confrerie.png') }}" alt="cda">
                 <h3>La Confrérie de l’Acier</h3>
                 </a>
                 <p>Gardiens de la technologie d’avant-guerre...</p>
@@ -49,5 +49,22 @@
             </div>
         </div>
     </section>
+
+    <section class="reglement">
+        <h2>Le Règlement</h2>
+        <p>Un ensemble de règles pour garantir une expérience de jeu respectueuse et immersive pour tous les membres de la communauté.</p>
+        <a href="{{ path('app_reglement') }}" class="btn">Voir le règlement</a>
+    </section>
+
+
+    <section class="equipe">
+        <h2>L'Équipe de Modération</h2>
+        <p>Une équipe dévouée à maintenir l'ordre et à aider les membres de la communauté.</p>
+        <a href="{{ path('app_equipe_moderation') }}" class="btn">Rencontrer l'équipe</a>
+    </section>
+
+    <footer>
+        <p>&copy; {{ "now"|date("Y") }} Project San Diego. Tous droits réservés.</p>
+
 </div>
 {% endblock %}
