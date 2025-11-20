@@ -12,5 +12,14 @@
     <img src="{{ asset('images/Factions/' ~ faction.slug ~ '.png') }}" alt="{{ faction.nom }}">
 </div>
 
+<div>
+    <h2>Les membres important<h2>
+<img src="{{ asset('images/Factions/' ~ faction.slug ~ '_members.png') }}" alt="{{ faction.nom }} membres importants">
+
+</div>
+
+<h2>Rejoindre le groupe</h2>
+<a href="https://discord.gg/UMgQCRMh5B">Lien vers le discord Principal</a>
+
 <a href="{{ path('app_faction') }}">← Retour à la liste des factions</a>
 {% endblock %}

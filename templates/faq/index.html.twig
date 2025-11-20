@@ -1,0 +1,135 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Accueil - Project San Diego{% endblock %}
+
+{% block body %}
+   <link rel="stylesheet" href="{{ asset('css/faq.css') }}">
+<div class="container">
+    <header>
+        {# <img src="{{ asset('images/Surfy.gif') }}" alt="Logo du projet" class="logo"> #}
+        <h1>La Foire Aux Questions</h1>
+    </header>
+
+    <section class="intro">
+        <h2>Foire Aux Questions</h2>
+        <p>Dans cette rubrique vous y retrouverez les questions les plus fréquentes, ou celle qui necessitent plus de détails.</p>
+        <p>Cette partie est faite pour aider la modération avec les questions basiques, et pour vous pour que vous ne perdiez pas de temps.</p>
+    </section>
+
+    <section class="faq-factions">
+        <h2>Factions</h2>
+<h3>Comment rejoindre une faction ?</h3>
+<p>Pour rejoindre une faction, rendez-vous sur notre serveur Discord et suivez les instructions dans le salon #recrutement-faction.</p>
+
+<h3>Y a-t-il des règles spécifiques pour chaque faction ?</h3>
+<p>Oui, chaque faction possède ses propres règles internes. Lisez-les attentivement avant de postuler.</p>
+
+<h3>Puis-je changer de faction plus tard ?</h3>
+<p>Oui, mais un délai de 7 jours est imposé entre deux changements, sauf autorisation du staff.</p>
+
+<h3>Combien de membres peut avoir une faction ?</h3>
+<p>Chaque faction possède un quota limité pour garantir l’équilibre du serveur.</p>
+
+<h3>Les factions peuvent-elles déclarer la guerre ?</h3>
+<p>Oui, mais uniquement avec une raison RP valable et après validation du staff.</p>
+
+<h3>Comment créer ma propre faction ?</h3>
+<p>La création de faction se fait via un ticket Discord avec un dossier de présentation complet.</p>
+
+<h3>Les factions peuvent-elles posséder des territoires ?</h3>
+<p>Oui, mais les territoires doivent être conquis et maintenus via des actions RP approuvées.</p>
+
+<h3>Puis-je être membre de plusieurs factions ?</h3>
+<p>Non, un joueur ne peut appartenir qu’à une faction à la fois.</p>
+
+    </section>
+
+    <section class="faq-reglement">
+        <h2>Règlement</h2>
+<h3>Quel est l’âge minimum pour jouer sur le serveur ?</h3>
+<p>L’âge minimum est fixé à 16 ans afin d’assurer une bonne maturité RP.</p>
+
+<h3>Le Power Gaming est-il autorisé ?</h3>
+<p>Non, toute action irréaliste ou impossible IRL est sanctionnée.</p>
+
+<h3>Qu’est-ce que le Meta Gaming ?</h3>
+<p>Le Meta Gaming consiste à utiliser des informations hors RP dans le RP. C'est strictement interdit.</p>
+
+<h3>Qu’est-ce que le Free Kill ?</h3>
+<p>Tuer un joueur sans raison RP est interdit et sévèrement puni.</p>
+
+<h3>Puis-je enregistrer mes scènes RP ?</h3>
+<p>Oui, tant que cela respecte la vie privée des joueurs et le règlement Discord.</p>
+
+<h3>Puis-je insulter en RP ?</h3>
+<p>Les insultes peuvent exister en RP, mais les propos discriminatoires restent totalement interdits.</p>
+
+<h3>Quel est le dress code en ville ?</h3>
+<p>Vous devez rester cohérent avec l’univers réaliste du serveur. Pas de skins fantaisistes.</p>
+
+<h3>Les braquages sont-ils limités ?</h3>
+<p>Oui, ils doivent respecter les horaires, les conditions RP et les effectifs minimums indiqués dans le règlement.</p>
+</section>
+
+<section class="faq-civil">
+<h3>Comment obtenir un emploi civil ?</h3>
+<p>Les emplois civils peuvent être demandés en mairie ou via le site RP du serveur.</p>
+
+<h3>Puis-je créer mon propre commerce ?</h3>
+<p>Oui, via un ticket « Projet RP Civil ». Un business plan peut être demandé.</p>
+
+<h3>Comment acheter une maison ?</h3>
+<p>Les maisons sont achetables via un agent immobilier en jeu ou sur rendez-vous RP.</p>
+
+<h3>Comment obtenir un permis de conduire ?</h3>
+<p>Il suffit de passer l’examen au centre de conduite municipal.</p>
+
+<h3>Comment acheter un véhicule ?</h3>
+<p>Les véhicules sont disponibles aux concessions RP et nécessitent un permis valide.</p>
+
+<h3>Puis-je acheter plusieurs véhicules ?</h3>
+<p>Oui, tant que vous pouvez couvrir les frais d’assurance et de stockage.</p>
+
+<h3>Comment fonctionne la banque ?</h3>
+<p>Votre compte bancaire en jeu permet les dépôts, retraits, prêts et virements.</p>
+</section>
+
+
+<section class="faq-technique">
+<h2>Questions Techniques et serveur</h2>    
+<h3>Quel est l’IP du serveur ?</h3>
+<p>Elle est disponible sur le Discord officiel dans le salon #infos-serveur.</p>
+
+<h3>Quels mods sont nécessaires ?</h3>
+<p>La liste complète est fournie sur Discord et doit être installée avant de rejoindre.</p>
+
+<h3>Que faire en cas de crash ?</h3>
+<p>Redémarrez le jeu et vérifiez votre cache. Si le problème persiste, ouvrez un ticket.</p>
+
+<h3>Comment signaler un bug ?</h3>
+<p>Ouvrez un ticket dans la catégorie #support-technique avec une capture d’écran.</p>
+
+<h3>Le serveur est-il ouvert 24/7 ?</h3>
+<p>Oui, sauf maintenance annoncée.</p>
+
+<h3>Comment récupérer mon mot de passe ?</h3>
+<p>Ouvrez un ticket dans #assistance. Aucun mot de passe ne sera donné publiquement.</p>
+</section>
+
+<section class="faq-economie">
+<h3>Comment gagner de l’argent rapidement ?</h3>
+<p>Les métiers légaux, les quêtes RP et les petites missions civiles sont les plus efficaces.</p>
+
+<h3>Y a-t-il des activités illégales ?</h3>
+<p>Oui, mais elles nécessitent une cohérence RP, un apprentissage et comportent des risques élevés.</p>
+
+<h3>Comment fonctionne l’impôt ?</h3>
+<p>Un prélèvement automatique est effectué en fonction de vos revenus déclarés.</p>
+
+<h3>Les stocks des commerces sont-ils limités ?</h3>
+<p>Oui, pour garantir un système économique dynamique.</p>
+</section>
+    <footer>
+</div>
+
+{% endblock %}

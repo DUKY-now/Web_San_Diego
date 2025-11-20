@@ -12,19 +12,27 @@
 
     <section class="intro">
         <h2>L'univers</h2>
-        <p>Dans les ruines de la Californie post-nucléaire, des factions luttent pour la survie...</p>
+        <p>Project San Diego est basé sur l'univers de Fallout mais n'est pas directement lié à la franchise officielle.</p>
+        <p>Les objets, batiments et nom de faction ne sont pas les memes que dans le jeu officiel.</p>
     </section>
 
     <section class="Explication">
         <h2>Pourquoi ?</h2>
-        <p>Le projet a vu le jour après d'inombrables années a faire du RolePlay sur le Jeu Fallout 76</p>
+        <p>Le projet a vu le jour après d'inombrables années a faire du RolePlay sur le Jeu Fallout 76.</p>
+        <p>Le but est de recréer un univers Post-Apocalyptique plus immersif sur Arma Reforger.</p>
     </section>
 
     <section class="Site">
-        <h2>A quoi va servir ce site ?</h2>
-        <p>Le site permettra de donner du contexte aux nouveaux joueurs n'ayant pas directement accès a Discord
-        et de présenter les différentes factions, le règlement, ainsi que l'équipe de modération aux futurs joueurs qui tomberont sur ce site par pur hasard.
-        </p>
+        <h2>A quoi sert ce site ?</h2>
+        <br><p>Ce site sert a y présenter notre projet en plus de notre Discord. Vous pourrez y retrouver des <strong> informations importantes</strong>.</p>
+        <br><p>Pour les nouveaux joueurs le site peut les aiders grace aux differentes catégories comme:</P>
+        <ul>
+        <li><a href="{{ path('app_faction') }}" class="btn">Factions</a></li>   
+        <li><a href="{{ path('app_reglement') }}" class="btn">Règlement</a></li>
+        <li><a href="{{ path('app_equipe_moderation') }}" class="btn">modération</a></li>
+        </ul>   
+
+        Une seule personne travaille et à travaillé sur le site donc si vous pensez qu'il manque d'informations ou que des informations devraient etre modifiées n'hésitez pas a faire un ticket, il se fera un plaisir de vous répondre.</p>
     </section>
 
     <section class="factions">
@@ -64,7 +72,5 @@
     </section>
 
     <footer>
-        <p>&copy; {{ "now"|date("Y") }} Project San Diego. Tous droits réservés.</p>
-
 </div>
 {% endblock %}

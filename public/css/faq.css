@@ -1,0 +1,127 @@
+body {
+    background: #0e0e0e;
+    color: #e0e0e0;
+    font-family: 'Orbitron', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+}
+
+.logo {
+    width: 200px;
+}
+.faq {
+  max-width: 800px;
+  margin: 20px auto;
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+}
+
+/* Rubriques */
+/* .faq .rubrique {
+  margin-top: 20px;
+}
+
+.faq .rubrique h2 {
+  background-color: #3498db;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 6px;
+  margin-bottom: 10px;
+} */
+.faq .factions {
+  margin-top: 20px;
+}
+
+.faq .factions h2 {
+  background-color: #3498db;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+.faq .reglement {
+  margin-top: 20px;
+}
+
+.faq .reglement h2 {
+  background-color: #3498db;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+.faq .civil {
+  margin-top: 20px;
+}
+
+.faq .civil h2 {
+  background-color: #3498db;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+.faq .technique {
+  margin-top: 20px;
+}
+
+.faq .technique h2 {
+  background-color: #3498db;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+.faq .economique {
+  margin-top: 20px;
+}
+
+
+.faq .economique h2 {
+  background-color: #3498db;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+/* Questions + réponses avec details/summary */
+.faq details {
+  background: #f0f0f0;
+  border-radius: 5px;
+  margin: 5px 0;
+  padding: 0 10px;
+}
+
+.faq summary {
+  cursor: pointer;
+  padding: 10px 0;
+  font-weight: bold;
+  list-style: none;
+}
+
+/* Supprime la flèche par défaut (optionnel) */
+.faq summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq details[open] summary {
+  color: #3498db;
+}
+
+/* Contenu de la réponse */
+.faq details p {
+  padding: 10px 0;
+  margin: 0;
+  border-left: 4px solid #3498db;
+  background: #fafafa;
+  border-radius: 0 5px 5px 0;
+}
