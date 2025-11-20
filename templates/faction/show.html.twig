@@ -3,6 +3,7 @@
 {% block title %}{{ faction.nom }} - Project San Diego{% endblock %}
 
 {% block body %}
+   <link rel="stylesheet" href="{{ asset('css/faction.css?v=1') }}">
 <h1>{{ faction.nom }}</h1>
 <p>{{ faction.Lore }}</p>
 
@@ -13,14 +14,26 @@
 </div>
 
 <div>
-    <h2>Les membres important<h2>
-<img src="{{ asset('images/Factions/' ~ faction.slug ~ '_members.png') }}" alt="{{ faction.nom }} membres importants">
-
+    <h2>Les membres importants</h2>
+     {% for member in members %}
+        <div class="member-card">
+            {% if member.photo %}
+                <img src="{{ asset('images/Membres/' ~ member.photo) }}" alt="{{ member.nom }}" class="member-photo">
+            {% endif %}
+            <div class="member-info">
+                <h3>{{ member.nom }}</h3>
+                <p><strong>Fonction:</strong> {{ member.fonction }}</p>
+            </div>
+        </div>
+    {% else %}
+        <p>Aucun membre à afficher.</p>
+    {% endfor %}
 </div>
-
+<div>
 <h2>Rejoindre le groupe</h2>
 <p>Pour rejoindre cette faction, veuillez consulter notre serveur Discord et suivre les instructions dans le salon approprié.</p>
 <a href="https://discord.gg/UMgQCRMh5B">Lien vers le discord Principal</a>
+</div>
 
-<a href="{{ path('app_faction') }}">← Retour à la liste des factions</a>
+<br><a href="{{ path('app_faction') }}">← Retour à la liste des factions</a>
 {% endblock %}

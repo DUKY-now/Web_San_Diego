@@ -39,20 +39,24 @@
         <h2>Les Factions</h2>
         <div class="cards">
             <div class="card">
-            <a href="{{ path('app_faction_show', {'slug': 'confrerie'}) }}"> {# Permet de creer un lien cliquable pour se rendre a la faction#}
+                <a href="{{ path('app_faction_show', {'slug': 'confrerie'}) }}"> {# Permet de creer un lien cliquable pour se rendre a la faction#}
                 <img src="{{ asset('images/factions/Confrerie.png') }}" alt="cda">
                 <h3>La Confrérie de l’Acier</h3>
                 </a>
                 <p>Gardiens de la technologie d’avant-guerre...</p>
             </div>
             <div class="card">
+                <a href="{{ path('app_faction_show', {'slug': 'Enclave'}) }}">
                 <img src="{{ asset('images/factions/enclave.png') }}" alt="Enclave">
                 <h3>L’Enclave</h3>
+                </a>
                 <p>Les survivants du gouvernement américain...</p>
             </div>
-                        <div class="card">
+            <div class="card">
+                <a href="{{ path('app_faction_show', {'slug': 'rnc'}) }}">
                 <img src="{{ asset('images/factions/Rnc.png') }}" alt="RNC">
                 <h3>La République de Nouvelle Californie</h3>
+                </a>
                 <p>Réels batisseurs de la Nouvelle Amérique</p>
             </div>
         </div>

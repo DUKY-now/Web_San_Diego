@@ -26,14 +26,14 @@ body {
 }
 
 .logo-area {
-    display: flex;
+    /* display: flex; */
     justify-content: center;
     align-items: center;
     gap: 25px;
 }
 
 .logo {
-    height: 100px;
+    height: 15px;
 }
 
 .main-header h1 {

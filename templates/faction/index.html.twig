@@ -3,20 +3,18 @@
 {% block title %}Factions - Project San Diego{% endblock %}
 
 {% block body %}
-   <link rel="stylesheet" href="{{ asset('css/faction.css') }}">
+   <link rel="stylesheet" href="{{ asset('css/faction.css?v=1') }}">
 
 <h1>Factions disponibles</h1>
 
 <div class="cards">
     {% for faction in factions %}
-        <div class="faction-card">
-        <h2>{{ faction.nom }}</h2>
-        <p>{{ faction.lore |slice(0, 100) ~ '...' }}</p>
-        <p><strong>Membres:</strong> {{ faction.membres }}</p>
-            <a href="{{ path('app_faction_show', {'slug': faction.slug}) }}">Voir plus
-                <img src="{{ asset('images/Factions/' ~ faction.slug ~ '.png') }}" alt="{{ faction.nom }}">
-                </a>
-            {# <p>{{ faction.short_lore }}</p> #}
+        <div class="card">
+            <img src="{{ asset('images/Factions/' ~ faction.slug ~ '.png') }}" alt="{{ faction.nom }}" class="faction-logo">
+            <h2>{{ faction.nom }}</h2>
+            <p>{{ faction.lore |slice(0, 100) ~ '...' }}</p>
+            <p><strong>Membres:</strong> {{ faction.membres }}</p>
+            <a href="{{ path('app_faction_show', {'slug': faction.slug}) }}">Voir plus</a>
         </div>
     {% endfor %}
 </div>

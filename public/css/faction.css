@@ -21,13 +21,6 @@ header {
     justify-content: center;
 }
 
-
-.cards {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-}
-
 .cards img {
     width: 100% !important;
     height: auto !important;
@@ -36,8 +29,9 @@ header {
     display: block;
 }
 .card {
-    width: 250px;
-     overflow: hidden; /* empêche toute image de dépasser */
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
     border: 1px solid #58ff58;
     border-radius: 10px;
     background: rgba(20, 20, 20, 0.9);
@@ -47,4 +41,70 @@ header {
 
 .card:hover {
     transform: scale(1.05);
+}
+
+.faction-logo {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px 8px 0 0;
+    display: block;
+}
+
+.card h2 {
+    margin: 15px;
+    color: #58ff58;
+    text-align: center;
+}
+
+.card p {
+    margin: 10px 15px;
+    font-size: 14px;
+}
+
+.card a {
+    display: inline-block;
+    margin: 10px 15px 15px 15px;
+    padding: 8px 15px;
+    background: #58ff58;
+    color: #0e0e0e;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.2s;
+}
+
+.card a:hover {
+    background: #3fd03f;
+}
+
+/* Styles pour les cartes de membres */
+.member-card {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    border: 1px solid #58ff58;
+    border-radius: 8px;
+    background: rgba(20, 20, 20, 0.9);
+    margin-bottom: 15px;
+    box-shadow: 0 0 10px #58ff58;
+}
+
+.member-photo {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.member-info h3 {
+    margin: 0 0 8px 0;
+    color: #58ff58;
+}
+
+.member-info p {
+    margin: 0;
+    font-size: 14px;
 }

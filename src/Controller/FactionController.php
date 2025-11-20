@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Entity\Members;
 use App\Repository\FactionsRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
@@ -22,7 +23,7 @@ final class FactionController extends AbstractController
         
     }
 
-    // Détails d’une faction
+    // Détails d'une faction
 #[Route('/faction/{slug}', name: 'app_faction_show')]
 public function show(string $slug, FactionsRepository $factionRepository): Response
 {
@@ -34,9 +35,10 @@ public function show(string $slug, FactionsRepository $factionRepository): Respo
         throw $this->createNotFoundException('Faction introuvable.');
     }
 
-    // On envoie la faction trouvée à la vue
+    // On envoie la faction trouvée à la vue avec ses membres
     return $this->render('faction/show.html.twig', [
         'faction' => $faction,
+        'members' => $faction->getFaction(),
     ]);
 }
 
