@@ -22,6 +22,9 @@ class Members
     #[ORM\Column(length: 255, nullable: true)]
     private ?string $Photo = null;
 
+    #[ORM\ManyToOne(inversedBy: 'faction')]
+    private ?factions $Appartenance = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -59,6 +62,18 @@ class Members
     public function setPhoto(?string $Photo): static
     {
         $this->Photo = $Photo;
+
+        return $this;
+    }
+
+    public function getAppartenance(): ?factions
+    {
+        return $this->Appartenance;
+    }
+
+    public function setAppartenance(?factions $Appartenance): static
+    {
+        $this->Appartenance = $Appartenance;
 
         return $this;
     }

@@ -9,11 +9,19 @@ body {
     background-image: radial-gradient(circle at 50% 50%, #0e0e0e 0%, #000 100%);
 }
 
+
+.tete-site {
+    text-align: center;
+    padding: 20px 0;
+    display: flex;
+    gap: 600px;
+}
+
 /* HEADER */
 .main-header {
     background: #111;
-    border-bottom: 2px solid #58ff58;
-    padding: 15px 0;
+    border-bottom: 3px solid #58ff58;
+    padding: 5px 0;
     text-align: center;
 }
 
@@ -21,18 +29,17 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 50px;
+    gap: 25px;
 }
 
 .logo {
-    width: 120px;
-    height: 120px;
+    height: 100px;
 }
 
 .main-header h1 {
     font-family: 'Orbitron', sans-serif;
     color: #58ff58;
-    text-shadow: 0 0 8px #58ff58;
+    text-shadow: 0 0 7px #58ff58;
 }
 
 /* NAVIGATION */
@@ -42,7 +49,7 @@ body {
     margin: 10px 0 0 0;
     display: flex;
     justify-content: center;
-    gap: 25px;
+    gap: 10px;
 }
 
 .main-nav a {

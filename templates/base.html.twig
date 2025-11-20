@@ -1,10 +1,10 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}Project San Diego{% endblock %}</title>
-    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/style.css?v=1') }}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
@@ -12,20 +12,21 @@
 </head>
 <body>
     <header class="main-header">
-        <div class="logo-area">
-            <img src="{{ asset('images/Surfy.gif') }}" alt="Logo Project San Diego" class="logo">
-            <h1>Project San Diego</h1>
-        </div>
+        <section class="tete-site">
+            <div class="logo-area">
+                <h1><img src="{{ asset('images/Surfy.gif') }}" alt="Logo Project San Diego" class="logo"> Project San Diego</h1>   
+            </div>
 
-        <nav class="main-nav">
-            <ul>
-                <li><a href="{{ path('app_home_page') }}">Accueil</a></li>
-                <li><a href="{{ path('app_faction') }}">Factions</a></li>
-                <li><a href="{{ path('app_reglement') }}">Règlement</a></li>
-                <li><a href="{{ path('app_equipe_moderation') }}">Équipe</a></li>
-                <li><a href="{{ path('app_FAQ') }}">Faq</a></li>
-            </ul>
-        </nav>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="{{ path('app_home_page') }}">Accueil</a></li>
+                    <li><a href="{{ path('app_faction') }}">Factions</a></li>
+                    <li><a href="{{ path('app_reglement') }}">Règlement</a></li>
+                    <li><a href="{{ path('app_equipe_moderation') }}">Équipe</a></li>
+                    <li><a href="{{ path('app_FAQ') }}">Faq</a></li>
+                </ul>
+            </nav>
+        </section>
     </header>
 
     <main>

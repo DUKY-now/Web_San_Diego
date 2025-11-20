@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\FactionsRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 #[ORM\Entity(repositoryClass: FactionsRepository::class)]
@@ -24,6 +26,17 @@ class Factions
 
     #[ORM\Column(length: 255)]
     private ?string $slug = null;
+
+    /**
+     * @var Collection<int, Members>
+     */
+    #[ORM\OneToMany(targetEntity: Members::class, mappedBy: 'Appartenance')]
+    private Collection $faction;
+
+    public function __construct()
+    {
+        $this->faction = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -74,6 +87,36 @@ class Factions
     public function setSlug(string $slug): static
     {
         $this->slug = $slug;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, Members>
+     */
+    public function getFaction(): Collection
+    {
+        return $this->faction;
+    }
+
+    public function addFaction(Members $faction): static
+    {
+        if (!$this->faction->contains($faction)) {
+            $this->faction->add($faction);
+            $faction->setAppartenance($this);
+        }
+
+        return $this;
+    }
+
+    public function removeFaction(Members $faction): static
+    {
+        if ($this->faction->removeElement($faction)) {
+            // set the owning side to null (unless already changed)
+            if ($faction->getAppartenance() === $this) {
+                $faction->setAppartenance(null);
+            }
+        }
 
         return $this;
     }
