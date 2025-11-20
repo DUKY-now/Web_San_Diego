@@ -3,6 +3,10 @@
 
 {% block title %}{{ title }}{% endblock %}
 
+{%block head %}   
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/reglement.css') }}">
+{% endblock %}
 {% block body %}
 <section class="chapitres">
     <h1>Règlement complet</h1>

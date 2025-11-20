@@ -1,9 +1,12 @@
 {% extends 'base.html.twig' %}
 
 {% block title %}Accueil - Project San Diego{% endblock %}
-
+{%block head %}   
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/home.css') }}">
+{% endblock %}
 {% block body %}
-   <link rel="stylesheet" href="{{ asset('css/home.css') }}">
+
 <div class="container">
     <header>
         {# <img src="{{ asset('images/Surfy.gif') }}" alt="Logo du projet" class="logo"> #}
@@ -70,7 +73,7 @@
 
 
     <section class="equipe">
-        <h2>L'Équipe de Modération</h2>
+        <h2>l'administration</h2>
         <p>Une équipe dévouée à maintenir l'ordre et à aider les membres de la communauté.</p>
         <a href="{{ path('app_equipe_moderation') }}" class="btn">Rencontrer l'équipe</a>
     </section>

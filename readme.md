@@ -251,7 +251,7 @@ Upload d’images (avatars, images de faction).
 
 Système de bannissement.
 
-Journal de modération.
+Journal de administration.
 
 Mode sombre / Mode clair.
 

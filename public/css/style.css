@@ -33,7 +33,9 @@ body {
 }
 
 .logo {
-    height: 15px;
+    width: 50px;
+    height: auto;
+
 }
 
 .main-header h1 {

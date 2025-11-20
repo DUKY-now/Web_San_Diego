@@ -1,9 +1,11 @@
 {% extends 'base.html.twig' %}
 
 {% block title %} Faq - Project San Diego{% endblock %}
-
+{%block head %}   
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/home.css') }}">
+{% endblock %}
 {% block body %}
-   <link rel="stylesheet" href="{{ asset('css/faq.css') }}">
 <div class="container">
     <header>
         {# <img src="{{ asset('images/Surfy.gif') }}" alt="Logo du projet" class="logo"> #}

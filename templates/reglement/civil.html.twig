@@ -1,7 +1,10 @@
 {% extends 'base.html.twig' %}
 
 {% block title %}{{ title }}{% endblock %}
-
+{%block head %}   
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/reglement.css') }}">
+{% endblock %} 
 {% block body %}
 <section class="ChapitreCivil">
     <h1>Règlement Civil</h1>

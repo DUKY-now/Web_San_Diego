@@ -12,7 +12,7 @@ final class EquipeModerationController extends AbstractController
     public function index(): Response
     {
         return $this->render('equipe_moderation/index.html.twig', [
-            'title' => 'Présentation de l\'équiepe de modération - Project San Diego',
+            'title' => 'Présentation de l\'équiepe de administration - Project San Diego',
         ]);
     }
 }
