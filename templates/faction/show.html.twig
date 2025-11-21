@@ -3,17 +3,16 @@
 {% block title %}{{ faction.nom }} - Project San Diego{% endblock %}
 {% block stylesheets %}
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/faction.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/faction.css?v=2') }}">
 {% endblock %}
 {% block body %}
-<h1>{{ faction.nom }}</h1>
-<p>{{ faction.Lore }}</p>
 
-<p><strong>Membres:</strong> {{ faction.membres }}</p>
-
+<h1 id="nom">{{ faction.nom }}</h1>
 <div class="cards">
-    <img src="{{ asset('images/Factions/' ~ faction.slug ~ '.png') }}" alt="{{ faction.nom }}">
+    <img src="{{ asset('images/Factions/' ~ faction.slug ~ '.png?v=2') }}" alt="{{ faction.nom }}">
 </div>
+<p>{{ faction.Lore }}</p>
+<p><strong>Membres:</strong> {{ faction.membres }}</p>
 
 <div>
     <h2>Les membres importants</h2>

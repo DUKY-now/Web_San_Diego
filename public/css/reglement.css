@@ -84,7 +84,3 @@ ul {
   padding-left: 1rem;
 }
 
-ul li::before {
-  content: "➢ ";
-  color: cyan;
-}

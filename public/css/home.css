@@ -11,12 +11,7 @@ header {
     padding: 20px;
 }
 
-/* .logo {
-    width: 50px;
-    height: auto;
-} */
-
-.cards {
+/* .cards {
     display: flex;
     gap: 20px;
     justify-content: center;
@@ -32,7 +27,7 @@ header {
 
 .card {
     width: 250px;
-     overflow: hidden; /* empêche toute image de dépasser */
+     overflow: hidden; empêche toute image de dépasser
     border: 1px solid #58ff58;
     border-radius: 10px;
     background: rgba(20, 20, 20, 0.9);
@@ -42,4 +37,82 @@ header {
 
 .card:hover {
     transform: scale(1.05);
+} */
+
+
+.cards {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.cards img {
+    width: 100% !important;
+    height: auto;
+    object-fit: cover !important;
+    border-radius: 8px;
+    display: block;
+}
+.card {   
+    width: 25%;
+    height: auto;
+    overflow: hidden;
+    border: 1px solid #58ff58;
+    border-radius: 10px;
+    background: rgba(20, 20, 20, 0.9);
+    box-shadow: 0 0 10px #58ff58;
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+ 
+.faction-logo {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px 8px 0 0;
+    display: block;
+}
+
+.card h3 {
+    margin: 15px;
+    color: #273627;
+    text-align: center;
+}
+
+.card p {
+    margin: 10px 15px;
+    font-size: 14px;
+}
+
+.card a {
+    display: inline-block;
+    margin: 10px 15px 15px 15px;
+    padding: 8px 15px;
+    background: #58ff58;
+    color: #0e0e0e;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.2s;
+}
+
+.card a:hover {
+    background: #3fd03f;
+}
+
+#annexe {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 20px 30px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-left: 5px solid #58ff58;
+    border-radius: 10px;
+    color: #a316b9;
+    font-family: 'Poppins', sans-serif;
+    text-align: justify;
+    line-height: 1.6;
+    box-shadow: 0 0 15px rgba(88, 255, 88, 0.3);
 }

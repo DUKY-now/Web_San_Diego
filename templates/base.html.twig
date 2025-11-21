@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}Project San Diego{% endblock %}</title>
-    <link rel="stylesheet" href="{{ asset('css/style.css?v=1') }}">
+    <link rel="stylesheet" href="{{ asset('css/style.css?v=4') }}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
@@ -14,7 +14,7 @@
     <header class="main-header">
         <section class="tete-site">
             <div class="logo-area">
-                <h1><img src="{{ asset('images/Surfy.gif') }}" alt="Logo Project San Diego" class="logo"> Project San Diego</h1>   
+                <a href="{{ path('app_home_page') }}" class="btn-menu"><h1><img src="{{ asset('images/Surfy.gif') }}" alt="Logo Project San Diego" class="logo"> Project San Diego</h1></a>   
             </div>
 
             <nav class="main-nav">
@@ -34,7 +34,7 @@
     </main>
 
     <footer class="main-footer">
-        <p>&copy; {{ "now"|date("Y") }} Project San Diego | by Duky | <a href="https://discord.gg/UMgQCRMh5B">Discord</a></p> 
+        <p>&copy; {{ "now"|date("Y") }} Project San Diego | by Duky | <a href="https://discord.gg/UMgQCRMh5B" class="btn-menu">Discord</a></p> 
         
     </footer>
 

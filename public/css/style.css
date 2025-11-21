@@ -9,14 +9,6 @@ body {
     background-image: radial-gradient(circle at 50% 50%, #0e0e0e 0%, #000 100%);
 }
 
-
-.tete-site {
-    text-align: center;
-    padding: 20px 0;
-    display: flex;
-    gap: 600px;
-}
-
 /* HEADER */
 .main-header {
     background: #111;
@@ -51,7 +43,7 @@ body {
     margin: 10px 0 0 0;
     display: flex;
     justify-content: center;
-    gap: 10px;
+    gap: 25px;
 }
 
 .main-nav a {
@@ -117,4 +109,7 @@ body {
     animation: flicker 0.2s infinite;
 }
 
-
+.btn-menu {
+    text-decoration:none ;
+    text-decoration-color: none;
+}
