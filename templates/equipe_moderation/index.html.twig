@@ -1,10 +1,12 @@
 {% extends 'base.html.twig' %}
 
 {% block title %}Modération - Project San Diego{% endblock %}
-
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/moderation.css') }}">
+{% endblock %}
 {% block body %}
-   <link rel="stylesheet" href="{{ asset('css/Style.css') }}">
-   <link rel="stylesheet" href="{{ asset('css/moderation.css') }}">
+
 <div class="example-wrapper">
     <h1>Présentation de l'administration</h1>
 

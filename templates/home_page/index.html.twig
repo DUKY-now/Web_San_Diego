@@ -2,14 +2,16 @@
 
 {% block title %}Accueil - Project San Diego{% endblock %}
 {%block head %}   
+{% endblock %}
+{% block stylesheets %}
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     <link rel="stylesheet" href="{{ asset('css/home.css') }}">
 {% endblock %}
+
 {% block body %}
 
 <div class="container">
     <header>
-        {# <img src="{{ asset('images/Surfy.gif') }}" alt="Logo du projet" class="logo"> #}
         <h1>Bienvenue dans Project San Diego</h1>
     </header>
 
@@ -35,13 +37,13 @@
         <li><a href="{{ path('app_equipe_moderation') }}" class="btn">modération</a></li>
         </ul>   
 
-        Une seule personne travaille et à travaillé sur le site donc si vous pensez qu'il manque d'informations ou que des informations devraient etre modifiées n'hésitez pas a faire un ticket, il se fera un plaisir de vous répondre.</p>
+        <p>Une seule personne travaille et à travaillé sur le site donc si vous pensez qu'il manque d'informations ou que des informations devraient etre modifiées n'hésitez pas a faire un ticket, il se fera un plaisir de vous répondre.</p>
     </section>
 
     <section class="factions">
         <h2>Les Factions</h2>
-        <div class="cards">
-            <div class="card">
+        <div class="card">
+            <div class="cards">
                 <a href="{{ path('app_faction_show', {'slug': 'confrerie'}) }}"> {# Permet de creer un lien cliquable pour se rendre a la faction#}
                 <img src="{{ asset('images/factions/Confrerie.png') }}" alt="cda">
                 <h3>La Confrérie de l’Acier</h3>

@@ -2,9 +2,11 @@
 
 {% block title %}{{ title }}{% endblock %}
 {%block head %}   
+{% endblock %} 
+{% block stylesheets %}
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     <link rel="stylesheet" href="{{ asset('css/reglement.css') }}">
-{% endblock %} 
+{% endblock %}
 {% block body %}
 <section class="ChapitreCivil">
     <h1>Règlement Civil</h1>
