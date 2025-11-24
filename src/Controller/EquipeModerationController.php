@@ -9,7 +9,7 @@ use Symfony\Component\Routing\Attribute\Route;
 
 final class EquipeModerationController extends AbstractController
 {
-    #[Route('/equipe/moderation', name: 'app_equipe_moderation')]
+    #[Route('/administration', name: 'app_equipe_moderation')]
     public function index(StaffsRepository $staffsRepository): Response
     {
         $staffs = $staffsRepository->findAll();
