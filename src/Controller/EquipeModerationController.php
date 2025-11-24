@@ -15,7 +15,7 @@ final class EquipeModerationController extends AbstractController
         $staffs = $staffsRepository->findAll();
         return $this->render('equipe_moderation/index.html.twig', [
             'title' => 'Présentation de l\'équiepe de administration - Project San Diego',
-            'staffs' => $staffs
+            'staffs' => $staffs,
         ]);
     }
 }

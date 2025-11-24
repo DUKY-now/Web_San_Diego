@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\StaffsRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 #[ORM\Entity(repositoryClass: StaffsRepository::class)]
@@ -22,9 +24,16 @@ class Staffs
     #[ORM\Column(length: 255)]
     private ?string $photo = null;
 
-    #[ORM\ManyToOne(inversedBy: 'admin')]
-    #[ORM\JoinColumn(nullable: false)]
-    private ?RoleAdministratif $role_admin = null;
+    /**
+     * @var Collection<int, Staffs>
+     */
+    #[ORM\ManyToOne(inversedBy: 'Pseudo')]
+    private ?PosteAdmin $posteAdmin = null;
+
+    public function __construct()
+    {
+        $this->role_ad = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -43,18 +52,6 @@ class Staffs
         return $this;
     }
 
-    public function getRole(): ?string
-    {
-        return $this->role;
-    }
-
-    public function setRole(string $role): static
-    {
-        $this->role = $role;
-
-        return $this;
-    }
-
     public function getPhoto(): ?string
     {
         return $this->photo;
@@ -67,14 +64,16 @@ class Staffs
         return $this;
     }
 
-    public function getRoleAdmin(): ?RoleAdministratif
+    
+
+    public function getPosteAdmin(): ?PosteAdmin
     {
-        return $this->role_admin;
+        return $this->posteAdmin;
     }
 
-    public function setRoleAdmin(?RoleAdministratif $role_admin): static
+    public function setPosteAdmin(?PosteAdmin $posteAdmin): static
     {
-        $this->role_admin = $role_admin;
+        $this->posteAdmin = $posteAdmin;
 
         return $this;
     }

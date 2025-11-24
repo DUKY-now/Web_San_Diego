@@ -27,11 +27,12 @@ Leur objectif principal est de garantir que les règles mises en places sont res
             {% endif %}
             <div class="staff-info">
                 <h3>{{ staff.pseudo }}</h3>
-                <p><strong>Fonction:</strong> {{ staff.role }}</p>
+                <p><strong>Fonction:</strong> {{ staff.posteAdmin.poste }}</p>
+                {# <p>{{ staff.role }}</p> #}
             </div>
         </div>
     {% else %}
-        <p>Aucun membre à afficher.</p>
+        <p>Petit problème, ils reviendront bientôt.</p>
     {% endfor %}
 </div>
 
