@@ -30,9 +30,16 @@ class Staffs
     #[ORM\ManyToOne(inversedBy: 'Pseudo')]
     private ?PosteAdmin $posteAdmin = null;
 
+    /**
+     * @var Collection<int, Ticket>
+     */
+    #[ORM\OneToMany(targetEntity: Ticket::class, mappedBy: 'staff')]
+    private Collection $Staff;
+
     public function __construct()
     {
         $this->role_ad = new ArrayCollection();
+        $this->Staff = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -74,6 +81,36 @@ class Staffs
     public function setPosteAdmin(?PosteAdmin $posteAdmin): static
     {
         $this->posteAdmin = $posteAdmin;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, Ticket>
+     */
+    public function getStaff(): Collection
+    {
+        return $this->Staff;
+    }
+
+    public function addStaff(Ticket $staff): static
+    {
+        if (!$this->Staff->contains($staff)) {
+            $this->Staff->add($staff);
+            $staff->setStaff($this);
+        }
+
+        return $this;
+    }
+
+    public function removeStaff(Ticket $staff): static
+    {
+        if ($this->Staff->removeElement($staff)) {
+            // set the owning side to null (unless already changed)
+            if ($staff->getStaff() === $this) {
+                $staff->setStaff(null);
+            }
+        }
 
         return $this;
     }
